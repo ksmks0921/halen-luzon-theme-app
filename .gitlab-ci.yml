@@ -1,0 +1,39 @@
+image: node:latest
+
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  script:
+    - yarn install
+    - yarn build
+    - tar -a -c -f build.tar.gz build
+    - scp build.tar.gz exampletech:/home/ubuntu
+    - ssh exampletech "tar -xzf /home/ubuntu/build.tar.gz -C /var/www/html/ && rm -rf build.tar.gz && exit"
+  tags:
+    - aws
+# Fs2(Pwd@yPEy9@EDhUvHEV)
+#Sure! Here are the general steps to set up GitLab CI/CD and register an AWS EC2 instance as a runner:
+
+#     Create a GitLab account: If you haven't already, create a GitLab account by visiting https://gitlab.com/users/sign_in.
+
+#     Create a GitLab project: Create a new GitLab project for your Next.js app.
+
+#     Set up GitLab CI/CD: In the GitLab project, navigate to Settings > CI/CD and enable GitLab CI/CD. This will create a default .gitlab-ci.yml file in your project.
+
+#     Create an IAM user in AWS: Create a new IAM user in AWS with the necessary permissions to interact with EC2 instances. The user should have the AmazonEC2FullAccess policy attached to it.
+
+#     Generate AWS Access Key and Secret Key: In the AWS console, generate an access key and secret key for the IAM user. Make sure to save these keys in a safe location as you will need them later.
+
+#     Launch an EC2 instance: Launch a new EC2 instance in your AWS account. Make sure that the instance has an SSH key pair associated with it and is accessible from the internet.
+
+#     Install GitLab Runner on the EC2 instance: Follow the instructions in the GitLab documentation to install and configure the GitLab Runner on the EC2 instance. You can find the instructions here: https://docs.gitlab.com/runner/install/
+
+#     Register the EC2 instance as a GitLab Runner: After installing the GitLab Runner on the EC2 instance, register the instance as a GitLab Runner by following the instructions in the GitLab documentation. You can find the instructions here: https://docs.gitlab.com/runner/register/
+
+#     Add tags to the GitLab Runner: When registering the EC2 instance as a GitLab Runner, add tags to the runner so that you can target specific runners in your .gitlab-ci.yml file. For example, you could add a tag called aws to the runner.
+
+#     Update the .gitlab-ci.yml file: Update the .gitlab-ci.yml file in your GitLab project with the deployment script that you want to use. Make sure to include the tag of the runner that you want to use in the tags section of the script.
+
+# That's it! You should now be able to use GitLab CI/CD to deploy your Next.js app to your AWS EC2 instance.

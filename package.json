@@ -1,0 +1,47 @@
+{
+    "name": "halen",
+    "version": "1.5.0",
+    "description": "Halen - React Next IT Business & Startup Template",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build && next export -o build",
+        "export": "next export",
+        "start": "next start",
+        "lint": "next lint",
+        "serve": "serve ./build",
+        "amplify-modelgen": "node amplify\\scripts\\amplify-modelgen.js",
+        "amplify-push": "node amplify\\scripts\\amplify-push.js"
+    },
+    "author": "halentech.com",
+    "license": "ISC",
+    "dependencies": {
+        "@aws-amplify/cli": "^7.6.8",
+        "@fortawesome/fontawesome-svg-core": "^6.4.0",
+        "@fortawesome/free-solid-svg-icons": "^6.4.0",
+        "@fortawesome/react-fontawesome": "^0.2.0",
+        "aws-amplify": "^4.3.12",
+        "axios": "^0.22.0",
+        "bootstrap-icons": "^1.7.2",
+        "next": "^12.0.7",
+        "nodemailer": "^6.7.2",
+        "nodemailer-sendgrid-transport": "^0.2.0",
+        "react": "^17.0.2",
+        "react-accessible-accordion": "^3.3.5",
+        "react-animate-on-scroll": "^2.1.5",
+        "react-dom": "^17.0.2",
+        "react-modal-video": "^1.2.8",
+        "react-owl-carousel3": "^2.2.5",
+        "react-share": "^4.4.1",
+        "react-visibility-sensor": "^5.1.1",
+        "sass": "^1.43.5",
+        "sweetalert2": "^11.2.1",
+        "sweetalert2-react-content": "^4.2.0",
+        "typescript": "^4.5.4"
+    },
+    "devDependencies": {
+        "ini": "^1.3.5",
+        "inquirer": "^6.5.1",
+        "serve": "^13.0.2"
+    }
+}

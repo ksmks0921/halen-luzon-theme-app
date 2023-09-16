@@ -1,0 +1,27 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-halen-luzon-theme-app-dev-173650-authRole",
+      "UnauthRoleArn": "arn:aws:iam::022851596313:role/amplify-halen-luzon-theme-app-dev-173650-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::022851596313:role/amplify-halen-luzon-theme-app-dev-173650-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-halen-luzon-theme-app-dev-173650-deployment",
+      "UnauthRoleName": "amplify-halen-luzon-theme-app-dev-173650-unauthRole",
+      "StackName": "amplify-halen-luzon-theme-app-dev-173650",
+      "StackId": "arn:aws:cloudformation:us-east-1:022851596313:stack/amplify-halen-luzon-theme-app-dev-173650/a0990e90-8478-11ec-98e5-0e7560343b15",
+      "AmplifyAppId": "d1hmjicw0e6xez"
+    },
+    "categories": {
+      "function": {
+        "halenluzonthemeappd24c6322": {
+          "deploymentBucketName": "amplify-halen-luzon-theme-app-dev-173650-deployment",
+          "s3Key": "amplify-builds/halenluzonthemeappd24c6322-4a2f6e717a657a724c6d-build.zip"
+        },
+        "InputCustomerHandler": {
+          "deploymentBucketName": "amplify-halen-luzon-theme-app-dev-173650-deployment",
+          "s3Key": "amplify-builds/InputCustomerHandler-486b324b573968577047-build.zip"
+        }
+      }
+    }
+  }
+}
